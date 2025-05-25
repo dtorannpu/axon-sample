@@ -20,6 +20,9 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.axonframework:axon-spring-boot-starter:4.11.2")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+	implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.11.1")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	developmentOnly("org.springframework.boot:spring-boot-docker-compose")
 	runtimeOnly("org.postgresql:postgresql")

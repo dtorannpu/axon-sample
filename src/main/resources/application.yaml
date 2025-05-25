@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: axon-sample
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+axon:
+  axonserver:
+    enabled: false
