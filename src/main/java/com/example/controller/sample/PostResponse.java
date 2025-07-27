@@ -1,4 +1,4 @@
-package com.example.axon.sample.controller.sample;
+package com.example.controller.sample;
 
 import java.util.UUID;
 
