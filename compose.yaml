@@ -52,23 +52,6 @@ services:
     networks:
       - network0
 
-  kafka2:
-    image: confluentinc/cp-kafka:7.9.2
-    container_name: kafka2
-    ports:
-      - "9094:9094"
-    depends_on:
-      - zookeeper
-    environment:
-      TZ: Asia/Tokyo
-      KAFKA_BROKER_ID: 3
-      KAFKA_ZOOKEEPER_CONNECT: "zookeeper:2181"
-      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_INTERNAL:PLAINTEXT
-      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9094,PLAINTEXT_INTERNAL://kafka1:29094
-      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT_INTERNAL
-    networks:
-      - network0
-
   kafka-ui:
     container_name: kafka-ui
     image: provectuslabs/kafka-ui:latest
@@ -77,14 +60,28 @@ services:
     depends_on:
       - kafka0
       - kafka1
-      - kafka2
     restart: always
     environment:
       TZ: Asia/Tokyo
       KAFKA_CLUSTERS_0_NAME: kafka-0
-      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:29092,kafka1:29093,kafka2:29094
+      KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:29092,kafka1:29093
     networks:
       - network0
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.3.2
+    container_name: keycloak
+    tty: true
+    stdin_open: true
+    ports:
+      - "18080:8080"
+    volumes:
+      - ./data/keycloak:/opt/keycloak/data
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: passwd
+    command:
+      - start-dev
 
 networks:
   network0:
