@@ -17,7 +17,7 @@ import org.springframework.web.server.ResponseStatusException;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/sample")
-public class SampleController {
+public class SampleApiController {
 
   private final SampleCommandService sampleCommandService;
   private final SampleQueryService sampleQueryService;
