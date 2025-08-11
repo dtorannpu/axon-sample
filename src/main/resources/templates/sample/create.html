@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" layout:decorate="~{layout.html}"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>サンプル作成</title>
+</head>
+<body>
+<section layout:fragment="content">
+  <h1>サンプル作成</h1>
+  <form th:action="@{/sample/create}" th:object="${createForm}" method="post">
+    <div>
+      <label>
+        内容
+        <input type="text" th:field="*{body}" th:errorclass="invalid"/>
+      </label>
+      <span class="text-error" th:if="${#fields.hasErrors('body')}" th:errors="*{body}"></span>
+    </div>
+    <input type="submit">
+  </form>
+</section>
+</body>
+</html>

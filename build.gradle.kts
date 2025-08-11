@@ -4,6 +4,7 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 	id("com.diffplug.spotless") version "7.2.1"
 }
+val vaadinVersion by extra("24.8.3")
 
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
@@ -29,6 +30,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
+    implementation("com.vaadin:vaadin-spring-boot-starter")
     testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
 	testImplementation("org.testcontainers:postgresql")
@@ -39,6 +41,11 @@ dependencies {
 	runtimeOnly("org.postgresql:postgresql")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+dependencyManagement {
+    imports {
+        mavenBom("com.vaadin:vaadin-bom:$vaadinVersion")
+    }
 }
 
 tasks.withType<Test> {

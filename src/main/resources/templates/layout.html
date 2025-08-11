@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">レイアウト</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
 <div th:text="${#authentication.name}"></div>

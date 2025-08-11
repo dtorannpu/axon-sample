@@ -7,7 +7,10 @@
 </head>
 <body>
 <section layout:fragment="content">
-  <h1>Hello World</h1>
+  <h1>サンプル</h1>
+
+  <a th:href="@{/sample/create}">作成</a>
+
   <table>
     <tbody>
     <tr th:each="d : ${data}">
