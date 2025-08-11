@@ -22,7 +22,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.axonframework:axon-spring-boot-starter:4.12.1")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.1`")
+    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0")
 	implementation("org.projectlombok:lombok")
 	testImplementation("org.testcontainers:junit-jupiter")
 	testImplementation("org.springframework.boot:spring-boot-testcontainers")
