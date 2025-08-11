@@ -8,13 +8,13 @@
 <body>
 <section layout:fragment="content">
   <h1>サンプル作成</h1>
-  <form th:action="@{/sample/create}" th:object="${createForm}" method="post">
+  <form method="post" th:action="@{/sample/create}" th:object="${createForm}">
     <div>
       <label>
         内容
-        <input type="text" th:field="*{body}" th:errorclass="invalid"/>
+        <input th:errorclass="invalid" th:field="*{body}" type="text"/>
       </label>
-      <span class="text-error" th:if="${#fields.hasErrors('body')}" th:errors="*{body}"></span>
+      <span class="text-error" th:errors="*{body}" th:if="${#fields.hasErrors('body')}"></span>
     </div>
     <input type="submit">
   </form>
