@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja" layout:decorate="~{layout.html}"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org">
 <head>
   <title>サンプル</title>
 </head>
 <body>
 <section layout:fragment="content">
   <h1>Hello World</h1>
-  <p>This is a sample page.</p>
+  <table>
+    <tbody>
+    <tr th:each="d : ${data}">
+      <td th:text="${d.id}"></td>
+      <td th:text="${d.body}"></td>
+    </tr>
+    </tbody>
+  </table>
 </section>
 </body>
 </html>
