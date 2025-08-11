@@ -8,6 +8,9 @@
 <body>
 <section layout:fragment="content">
   <h1>サンプル作成</h1>
+
+  <a th:href="@{/sample}">戻る</a>
+
   <form method="post" th:action="@{/sample/create}" th:object="${createForm}">
     <div>
       <label>

@@ -2,7 +2,7 @@ spring:
   application:
     name: axon-sample
   jpa:
-    database: postgresql
+    open-in-view: true
     hibernate:
       ddl-auto: update
   security:

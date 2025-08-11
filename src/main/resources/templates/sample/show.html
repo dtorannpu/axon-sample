@@ -9,17 +9,10 @@
 <section layout:fragment="content">
   <h1>サンプル</h1>
 
-  <a th:href="@{/sample/create}">作成</a>
+  <a th:href="@{/sample}">戻る</a>
 
-  <table>
-    <tbody>
-    <tr th:each="d : ${data}">
-      <td th:text="${d.id}"></td>
-      <td th:text="${d.body}"></td>
-      <td><a th:href="@{/sample/{id}(id=${d.id})}">詳細</a></td>
-    </tr>
-    </tbody>
-  </table>
+  <div th:text="${data.id}"></div>
+  <div th:text="${data.body}"></div>
 </section>
 </body>
 </html>
