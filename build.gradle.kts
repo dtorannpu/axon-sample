@@ -2,7 +2,7 @@ plugins {
 	java
 	id("org.springframework.boot") version "3.5.4"
 	id("io.spring.dependency-management") version "1.1.7"
-	id("com.diffplug.spotless") version "7.2.1"
+	id("com.diffplug.spotless") version "8.1.0"
 }
 val vaadinVersion by extra("24.8.3")
 
