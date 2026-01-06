@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.5.4"
+	id("org.springframework.boot") version "3.3.5"
 	id("io.spring.dependency-management") version "1.1.7"
 	id("com.diffplug.spotless") version "8.1.0"
 }
@@ -11,12 +11,13 @@ version = "0.0.1-SNAPSHOT"
 
 java {
 	toolchain {
-		languageVersion = JavaLanguageVersion.of(25)
+		languageVersion = JavaLanguageVersion.of(21)
 	}
 }
 
 repositories {
 	mavenCentral()
+	maven { url = uri("https://repo.spring.io/release") }
 }
 
 dependencies {
@@ -58,7 +59,7 @@ spotless {
 		importOrder()
 		removeUnusedImports()
 		cleanthat()
-			.sourceCompatibility("25")
+			.sourceCompatibility("21")
 		googleJavaFormat()
 		formatAnnotations()
 	}
