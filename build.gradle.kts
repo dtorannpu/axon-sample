@@ -1,6 +1,6 @@
 plugins {
 	java
-	id("org.springframework.boot") version "3.5.4"
+	id("org.springframework.boot") version "4.0.1"
 	id("io.spring.dependency-management") version "1.1.7"
 	id("com.diffplug.spotless") version "8.1.0"
 }
@@ -28,7 +28,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.4.0")
     implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
+    implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity7")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
     implementation("org.springframework.boot:spring-boot-starter-validation")
     testImplementation("org.testcontainers:junit-jupiter")
