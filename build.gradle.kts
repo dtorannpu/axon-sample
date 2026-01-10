@@ -20,9 +20,9 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.axonframework:axon-spring-boot-starter:4.12.2")
+	implementation("org.axonframework:axon-spring-boot-starter:5.0.1")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0")
+    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:5.0.1")
 	implementation("org.projectlombok:lombok")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.4.0")
