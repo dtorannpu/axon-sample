@@ -4,7 +4,6 @@ import com.example.command.dto.SampleCommand;
 import java.util.UUID;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +14,6 @@ public class SampleCommandService {
 
   private final CommandGateway commandGateway;
 
-  @CommandHandler
   public UUID request(String body) {
     var id = UUID.randomUUID();
     var command = new SampleCommand(id, body);
