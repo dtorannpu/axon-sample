@@ -53,8 +53,8 @@ class SampleCommandServiceTest {
         .sendAndWait(
             argThat(
                 command -> {
-                  if (command instanceof SampleCommand sampleCommand) {
-                    return sampleCommand.body().equals(body) && sampleCommand.docId() != null;
+                  if (command instanceof SampleCommand(UUID docId, String body1)) {
+                    return body1.equals(body) && docId != null;
                   }
                   return false;
                 }));
