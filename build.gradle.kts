@@ -25,7 +25,7 @@ dependencies {
     implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0")
     implementation("org.projectlombok:lombok")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-    implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.4.0")
+    implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:4.0.0")
     implementation("org.springframework.boot:spring-boot-starter-security")
     implementation("org.thymeleaf.extras:thymeleaf-extras-springsecurity6")
     implementation("org.springframework.boot:spring-boot-starter-oauth2-client")
