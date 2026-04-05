@@ -8,6 +8,17 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: "Asia/Tokyo"
+    cooldown:
+      default-days: 7
+    assignees:
+      - "dtorannpu"
+    open-pull-requests-limit: 10
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
     assignees:
       - "dtorannpu"
     open-pull-requests-limit: 10
