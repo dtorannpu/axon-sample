@@ -22,7 +22,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-webmvc")
     implementation("org.axonframework:axon-spring-boot-starter:4.13.0")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.0")
+    implementation("org.axonframework.extensions.kafka:axon-kafka-spring-boot-starter:4.12.1")
     implementation("org.projectlombok:lombok")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:4.0.1")
